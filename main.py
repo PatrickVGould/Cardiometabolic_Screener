@@ -2,7 +2,7 @@ import streamlit as st
 
 # Heading dividers
 def h4_divider(text):
-    st.markdown(f"<h4 style='margin-bottom: 0; color: #404040'>{text}</h4>", unsafe_allow_html=True)
+    st.markdown(f"<h5 style='margin-bottom: 0; color: #404040'>{text}</h5>", unsafe_allow_html=True)
     st.markdown("<hr style='margin-top: 0; border: none; height: 1px; background-color: black;'>", unsafe_allow_html=True)
 
 # Center align the title and subheader
@@ -12,7 +12,7 @@ with col1:
     st.image("mg_logo.png", use_column_width='auto')
 with col2:
     st.markdown("""<h2 style='margin-top: -1; text-align: center; color: #404040;'>Positive Cardiometabolic Health Resource</h2>""", unsafe_allow_html=True)
-st.markdown("<h5 style='text-align: center; color: #404040;'>An early intervention framework for people on psychotropic medication</h5>", unsafe_allow_html=True)
+st.markdown("<h4 style='text-align: center; color: #404040;'>An early intervention framework for people on psychotropic medication</h4>", unsafe_allow_html=True)
 
 #Explainer text
 h4_divider("How to use the tool:")
