@@ -21,7 +21,7 @@ st.markdown("""<p style='text-align: justify; color: #404040;'>This is a tool to
 # Add button to display demographic questions
 start = st.button("Use the tool")
 
-if st.button:
+if start:
     # Demographic questions
     h4_divider("Demographics")
     patient_name = st.text_input(label = "What is the person's name?", help = "This will be used to personalise the report at the end and will not be stored or shared with anyone else.")
