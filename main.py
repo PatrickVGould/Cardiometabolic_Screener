@@ -1,10 +1,13 @@
 import streamlit as st
 
 # Add logo to page
-st.image("mg_logo.png", width=200)
 
 # Center align the title and subheader
-st.markdown("<h1 style='text-align: center; color: #404040;'>Positive Cardiometabolic Health Resource</h1>", unsafe_allow_html=True)
+col1, col2 = st.columns(2)
+with col1:
+    st.image("mg_logo.png", width=200)
+with col2:
+    st.markdown("<h1 style='text-align: center; color: #404040;'>Positive Cardiometabolic Health Resource</h1>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center; color: #404040;'>An early intervention framework for people on psychotropic medication</h3>", unsafe_allow_html=True)
 
 def h4_divider(text):
