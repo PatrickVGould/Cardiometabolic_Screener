@@ -7,15 +7,16 @@ col1, col2 = st.columns([1,3], gap = "large")
 with col1:
     st.image("mg_logo.png", use_column_width='auto')
 with col2:
-    st.markdown("""<h3 style='margin-top: -1; text-align: center; color: #404040;'>Positive Cardiometabolic Health Resource</h3>""", unsafe_allow_html=True)
+    st.markdown("""<h2 style='margin-top: -1; text-align: center; color: #404040;'>Positive Cardiometabolic Health Resource</h2>""", unsafe_allow_html=True)
 st.markdown("<h5 style='text-align: center; color: #404040;'>An early intervention framework for people on psychotropic medication</h5>", unsafe_allow_html=True)
 
 def h4_divider(text):
-    st.markdown("<h4 style='text-align: left; color: #404040;'>%s</h4>" % text, unsafe_allow_html=True)
+    st.markdown(f"<h4 style='margin-bottom: -1; color: #404040'>{text}</h4>", unsafe_allow_html=True)
+    st.markdown("<hr style='margin-top: -1; border: none; height: 1px; background-color: black;'>", unsafe_allow_html=True)
+
 
 # Demographic questions
-st.markdown("<h4 style='margin-bottom: -1; color: #404040'>Demographics</h4>", unsafe_allow_html=True)
-st.markdown("<hr style='margin-top: -1; border: none; height: 1px; background-color: black;'>", unsafe_allow_html=True)
+h4_divider("Demographics")
 patient_name = st.text_input(label = "What is the person's name?", help = "This will be used to personalise the report at the end and will not be stored or shared with anyone else.")
 col1, col2, col3 = st.columns(3)
 with col1:
