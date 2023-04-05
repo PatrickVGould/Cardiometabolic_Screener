@@ -9,8 +9,8 @@ st.markdown("<h3 style='text-align: center; color: #404040;'>An early interventi
 
 # Demographic questions
 #st.header("""Demographics""")
-st.markdown("""Demographics
----""")
+st.markdown("Demographics")
+st.markdown("---")
 patient_name = st.text_input(label = "What is the person's name?", help = "This will be used to personalise the report at the end and will not be stored or shared with anyone else.")
 col1, col2, col3 = st.columns(3)
 with col1:
