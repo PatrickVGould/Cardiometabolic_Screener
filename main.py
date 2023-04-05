@@ -132,10 +132,12 @@ if start:
         snoring = st.radio("Does the person have loud snoring or stop breathing during sleep?", ["Yes", "No"])
 
     # Submit button
+if start:
     submit = st.button("Submit")
 
 # Recommendations
 if submit:
+    start = False
     st.write("**Cardiometabolic Recommendations Report**")
     st.write("Patient Name: ", patient_name)
     st.write("Age: ", age)
