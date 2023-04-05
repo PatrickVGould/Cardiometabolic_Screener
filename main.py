@@ -11,8 +11,8 @@ def h4_divider(text):
     st.markdown("<h4 style='text-align: left; color: #404040;'>%s</h4>" % text, unsafe_allow_html=True)
 
 # Demographic questions
+st.write("<h4 style='margin-bottom: 0;'>Demographrics</h4>", unsafe_allow_html=True)
 st.write("<hr style='border: none; height: 1px; background-color: black;'>", unsafe_allow_html=True)
-st.header("""Demographics""")
 patient_name = st.text_input(label = "What is the person's name?", help = "This will be used to personalise the report at the end and will not be stored or shared with anyone else.")
 col1, col2, col3 = st.columns(3)
 with col1:
