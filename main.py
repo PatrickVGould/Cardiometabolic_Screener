@@ -5,6 +5,9 @@ def h4_divider(text):
     st.markdown(f"<h5 style='margin-bottom: 0; color: #404040'>{text}</h5>", unsafe_allow_html=True)
     st.markdown("<hr style='margin-top: 0; border: none; height: 1px; background-color: black;'>", unsafe_allow_html=True)
 
+start = False
+submit = False
+
 # Center align the title and subheader
 col1, col2 = st.columns([1,3], gap = "large")
 with col1:
