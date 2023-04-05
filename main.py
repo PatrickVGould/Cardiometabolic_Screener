@@ -3,7 +3,7 @@ import streamlit as st
 # Add logo to page
 
 # Center align the title and subheader
-col1, col2 = st.columns(2)
+col1, col2 = st.columns([1,2])
 with col1:
     st.image("mg_logo.png", width=200)
 with col2:
