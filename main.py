@@ -14,7 +14,6 @@ def h4_divider(text):
 #st.header("""Demographics""")
 st.markdown("""Demographics
 ---""")
-st.markdown("<style>div.stMarkdown {margin: 0; padding: 0;}</style>", unsafe_allow_html=True)
 patient_name = st.text_input(label = "What is the person's name?", help = "This will be used to personalise the report at the end and will not be stored or shared with anyone else.")
 col1, col2, col3 = st.columns(3)
 with col1:
