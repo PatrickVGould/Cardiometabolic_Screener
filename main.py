@@ -3,14 +3,9 @@ import streamlit as st
 # Add logo to page
 st.image("mg_logo.png", width=200)
 
-
-# Set up page title and subtitle
-st.title("Positive Cardiometabolic Health Resource 💓")
-st.subheader("An early intervention framework for people on psychotropic medication")
-
 # Center align the title and subheader
-st.markdown("<h1 style='text-align: center; color: black;'>Positive Cardiometabolic Health Resource 💓</h1>", unsafe_allow_html=True)
-st.markdown("<h3 style='text-align: center; color: black;'>An early intervention framework for people on psychotropic medication</h3>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: #404040;'>Positive Cardiometabolic Health Resource 💓</h1>", unsafe_allow_html=True)
+st.markdown("<h3 style='text-align: center; color: #404040;'>An early intervention framework for people on psychotropic medication</h3>", unsafe_allow_html=True)
 
 # Demographic questions
 st.header("Demographics")
