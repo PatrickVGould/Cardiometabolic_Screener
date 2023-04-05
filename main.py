@@ -1,10 +1,14 @@
 import streamlit as st
 
-# Add logo to page
+# Heading dividers
+def h4_divider(text):
+    st.markdown(f"<h4 style='margin-bottom: -1; color: #404040'>{text}</h4>", unsafe_allow_html=True)
+    st.markdown("<hr style='margin-top: -1; border: none; height: 1px; background-color: black;'>", unsafe_allow_html=True)
 
 # Center align the title and subheader
 col1, col2 = st.columns([1,3], gap = "large")
 with col1:
+    # Add the logo
     st.image("mg_logo.png", use_column_width='auto')
 with col2:
     st.markdown("""<h2 style='margin-top: -1; text-align: center; color: #404040;'>Positive Cardiometabolic Health Resource</h2>""", unsafe_allow_html=True)
@@ -12,13 +16,11 @@ st.markdown("<h5 style='text-align: center; color: #404040;'>An early interventi
 
 #Explainer text
 st.markdown("""---""")
-st.markdown("""<h4 style='margin-bottom: -1; color: #404040'>What is this?</h4>""", unsafe_allow_html=True)
-st.markdown("<hr style='margin-top: -1; border: none; height: 1px; background-color: black;'>", unsafe_allow_html=True)
+st.markdown("""<h4 style='margin-bottom: 0; color: #404040'>What is this?</h4>""", unsafe_allow_html=True)
+st.markdown("<hr style='margin-top: 0; border: none; height: 1px; background-color: black;'>", unsafe_allow_html=True)
 st.markdown("""<p style='text-align: justify; color: #404040;'>This is a tool to help you identify people at risk of cardiometabolic disease (CMD) and provide them with early intervention. CMD is a group of diseases that affect the heart, blood vessels, and blood. These diseases include heart disease, stroke, high blood pressure, high cholesterol, and diabetes. CMD is the leading cause of death in Australia and is a major cause of disability. CMD is also a major risk factor for mental health conditions. CMD is a complex condition and is influenced by many factors. This tool is designed to help you identify people at risk of CMD and provide them with early intervention. It is not a diagnostic tool and should not be used to diagnose CMD. It is also not a substitute for clinical judgement. If you have any concerns about a person's health, please contact your local GP or mental health clinician.</p>""", unsafe_allow_html=True)
 
-def h4_divider(text):
-    st.markdown(f"<h4 style='margin-bottom: -1; color: #404040'>{text}</h4>", unsafe_allow_html=True)
-    st.markdown("<hr style='margin-top: -1; border: none; height: 1px; background-color: black;'>", unsafe_allow_html=True)
+
 
 
 # Demographic questions
