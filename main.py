@@ -18,16 +18,19 @@ st.markdown("<h5 style='text-align: center; color: #404040;'>An early interventi
 h4_divider("How to use the tool:")
 st.markdown("""<p style='text-align: justify; color: #404040;'>This is a tool to help you identify people on psychotropic medications who may be at risk of poor cardiometabolic health and provide them with early intervention. It is not a diagnostic tool and should not be used to diagnose CMD. It is also not a substitute for clinical judgement. If you have any concerns about a person's health, please contact your local GP or mental health clinician.</p>""", unsafe_allow_html=True)
 
-# Demographic questions
-h4_divider("Demographics")
-patient_name = st.text_input(label = "What is the person's name?", help = "This will be used to personalise the report at the end and will not be stored or shared with anyone else.")
-col1, col2, col3 = st.columns(3)
-with col1:
-    sex = st.radio("What is the person's sex?", ["Male", "Female", "Other"])
-with col2:
-    age = st.number_input(label="What is the person's age?", step=1, min_value=0, max_value=120, help = "This is to determine which risk calculations and recommendations should be made as they vary between age groups.")
-with col3:
-    ethnicity = st.radio("Is the person of any of the following ethnicities? South Asian, Chinese, Japanese, Ethnic South and Central Americans", ["Yes", "No"])
+# Add button to display demographic questions
+ 
+if st.button("Use the tool"):
+    # Demographic questions
+    h4_divider("Demographics")
+    patient_name = st.text_input(label = "What is the person's name?", help = "This will be used to personalise the report at the end and will not be stored or shared with anyone else.")
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        sex = st.radio("What is the person's sex?", ["Male", "Female", "Other"])
+    with col2:
+        age = st.number_input(label="What is the person's age?", step=1, min_value=0, max_value=120, help = "This is to determine which risk calculations and recommendations should be made as they vary between age groups.")
+    with col3:
+        ethnicity = st.radio("Is the person of any of the following ethnicities? South Asian, Chinese, Japanese, Ethnic South and Central Americans", ["Yes", "No"])
 
 # Lifestyle questions
 st.markdown("""---""")
