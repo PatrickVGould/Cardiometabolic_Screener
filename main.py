@@ -11,7 +11,7 @@ def h4_divider(text):
     st.markdown("<h4 style='text-align: left; color: #404040;'>%s</h4>" % text, unsafe_allow_html=True)
 
 # Demographic questions
-st.header("""---""")
+st.markdown("""---""")
 st.header("""Demographics""")
 patient_name = st.text_input(label = "What is the person's name?", help = "This will be used to personalise the report at the end and will not be stored or shared with anyone else.")
 col1, col2, col3 = st.columns(3)
@@ -23,7 +23,7 @@ with col3:
     ethnicity = st.radio("Is the person of any of the following ethnicities? South Asian, Chinese, Japanese, Ethnic South and Central Americans", ["Yes", "No"])
 
 # Lifestyle questions
-st.header("""---""")
+st.markdown("""---""")
 st.header("Lifestyle")
 col1, col2, col3 = st.columns(3)
 with col1:
@@ -34,7 +34,7 @@ with col3:
     activity = st.radio("Does the person have more than 30 minutes physical activity on most days?", ["Yes", "No"])
 
 # Obesity questions
-st.header("""---""")
+st.markdown("""---""")
 st.header("Obesity")
 col1, col2, col3 = st.columns(3)
 with col1:
@@ -58,7 +58,7 @@ with col1:
     waist_increase = st.radio("Has the person had an increase in waist circumference of over 5cm in the past 3 months?", ["Yes", "No"])
 
 # Blood pressure questions
-st.header("""---""")
+st.markdown("""---""")
 st.header("Blood Pressure")
 col1, col2 = st.columns(2)
 with col1:
@@ -69,7 +69,7 @@ with col2:
     diastolic_bp = st.radio(label = "What is the person's diastolic blood pressure?", options = dia_bp_options)
 
 # Glucose questions
-st.header("""---""")
+st.markdown("""---""")
 st.header("Glucose")
 col1, col2, col3, col4 = st.columns(4)
 with col1:
@@ -86,7 +86,7 @@ with col4:
     rpg = st.radio(label = "What is the person's RPG?", options = rpg_options)
 
 # Blood lipids questions
-st.header("""---""")
+st.markdown("""---""")
 st.header("Blood Lipids")
 col1, col2, col3 = st.columns(3)
 with col1:
@@ -109,7 +109,7 @@ with col3:
     placeholder = st.empty()
 
 # Sleep questions
-st.header("""---""")
+st.markdown("""---""")
 st.header("Sleep")
 col1, col2, col3 = st.columns(3)
 with col1:
