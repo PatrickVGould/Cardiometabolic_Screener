@@ -5,7 +5,7 @@ import streamlit as st
 # Center align the title and subheader
 col1, col2 = st.columns([1,3], gap = "large")
 with col1:
-    st.image("mg_logo.png", width=200)
+    st.image("mg_logo.png", width=150)
 with col2:
     st.markdown("<h1 style='text-align: center; color: #404040;'>Positive Cardiometabolic Health Resource</h1>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center; color: #404040;'>An early intervention framework for people on psychotropic medication</h3>", unsafe_allow_html=True)
