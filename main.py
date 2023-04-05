@@ -20,6 +20,8 @@ h4_divider("How to use the tool:")
 st.markdown("""<p style='text-align: justify; color: #404040;'>This is a tool to help you identify people on psychotropic medications who may be at risk of poor cardiometabolic health and provide them with early intervention. It is not a diagnostic tool and should not be used to diagnose CMD. It is also not a substitute for clinical judgement. If you have any concerns about a person's health, please contact your local GP or mental health clinician.</p>""", unsafe_allow_html=True)
 
 # Demographic questions
+st.markdown("")
+st.markdown("")
 h4_divider("Demographics")
 patient_name = st.text_input(label = "What is the person's name?", help = "This will be used to personalise the report at the end and will not be stored or shared with anyone else.")
 col1, col2, col3 = st.columns(3)
