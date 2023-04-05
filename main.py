@@ -4,11 +4,14 @@ import streamlit as st
 st.image("mg_logo.png", width=200)
 
 # Center align the title and subheader
-st.markdown("<h1 style='text-align: center; color: #404040;'>Positive Cardiometabolic Health Resource 💓</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: #404040;'>Positive Cardiometabolic Health Resource</h1>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center; color: #404040;'>An early intervention framework for people on psychotropic medication</h3>", unsafe_allow_html=True)
 
+def h4_divider(text):
+    st.markdown("<h4 style='text-align: left; color: #404040;'>%s</h4>" % text, unsafe_allow_html=True)
+    st.markdown("---")
 # Demographic questions
-st.header("Demographics")
+h4_divider("Demographics")
 patient_name = st.text_input(label = "What is the person's name?", help = "This will be used to personalise the report at the end and will not be stored or shared with anyone else.")
 col1, col2, col3 = st.columns(3)
 with col1:
