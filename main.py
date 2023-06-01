@@ -1,5 +1,10 @@
 import streamlit as st
 
+# To do: 
+# - Split the results section into its own page (maybe)
+# - Put each of the sections together rather than results report and recommendations
+# - Make it in normal English
+
 # Heading dividers
 def h4_divider(text):
     st.markdown(f"<h5 style='margin-bottom: 0; color: #404040'>{text}</h5>", unsafe_allow_html=True)
