@@ -142,53 +142,53 @@ submit = st.button("Submit")
 # Recommendations
 if submit:
     start = False
-    st.write("**Cardiometabolic Recommendations Report**")
-    st.write("Patient Name: ", patient_name)
+    st.write("**Cardiometabolic Calculator Recommendations**")
+    st.write("Persons Name: ", patient_name)
     st.write("Age: ", age)
     st.write("Sex: ", sex)
 
-    st.write("**Current Values:**")
+    #st.write("**Current Values:**")
     # Table of the current values that were entered by the user that are not blank
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        st.write("**Lifestyle:**")
-        st.write("Smoking: ", smoking)
-        st.write("Diet: ", diet)
-        st.write("Activity: ", activity)
-        st.write("Weight Increase: ", weight_increase)
-        st.write("Waist Increase: ", waist_increase)   
-    with col2:
-        st.write("**Obesity:**")
-        st.write("BMI: ", bmi)
-        st.write("Waist Circumference: ", waist_circ)
-        st.write("Waist Increase: ", waist_increase)
-        st.write("Weight Increase: ", weight_increase)
-    with col3:
-        st.write("**Blood Pressure:**")
-        st.write("Systolic BP: ", systolic_bp)
-        st.write("Diastolic BP: ", diastolic_bp)
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        st.write("**Glucose:**")
-        st.write("HbA1c: ", hba1c)
-        st.write("FPG: ", fpg)
-        st.write("AUSDRISK: ", ausdrisk)
-    with col2:
-        st.write("**Blood Lipids:**")
-        st.write("TC: ", tc)
-        st.write("LDL: ", ldl)
-        st.write("HDL: ", hdl)
-        st.write("RPG: ", rpg)
-        st.write("non-HDL: ", non_hdl)
-        st.write("TRIG: ", trig)
-    with col3:
-        st.write("**Sleep:**")
-        st.write("Neck Circumference: ", neck_circ)
-        st.write("Daytime Tiredness: ", daytime_tiredness)
-        st.write("Snoring: ", snoring)
+    #col1, col2, col3 = st.columns(3)
+    #with col1:
+    #    st.write("**Lifestyle:**")
+    #    st.write("Smoking: ", smoking)
+    #    st.write("Diet: ", diet)
+    #    st.write("Activity: ", activity)
+    #    st.write("Weight Increase: ", weight_increase)
+    #    st.write("Waist Increase: ", waist_increase)   
+    #with col2:
+    #    st.write("**Obesity:**")
+    #    st.write("BMI: ", bmi)
+    #    st.write("Waist Circumference: ", waist_circ)
+    #    st.write("Waist Increase: ", waist_increase)
+    #    st.write("Weight Increase: ", weight_increase)
+    #with col3:
+    #    st.write("**Blood Pressure:**")
+    #    st.write("Systolic BP: ", systolic_bp)
+    #    st.write("Diastolic BP: ", diastolic_bp)
+    #col1, col2, col3 = st.columns(3)
+    #with col1:
+    #    st.write("**Glucose:**")
+    #    st.write("HbA1c: ", hba1c)
+    #    st.write("FPG: ", fpg)
+    #    st.write("AUSDRISK: ", ausdrisk)
+    #with col2:
+    #    st.write("**Blood Lipids:**")
+    #    st.write("TC: ", tc)
+    #    st.write("LDL: ", ldl)
+    #    st.write("HDL: ", hdl)
+    #    st.write("RPG: ", rpg)
+    #    st.write("non-HDL: ", non_hdl)
+    #    st.write("TRIG: ", trig)
+    #with col3:
+    #    st.write("**Sleep:**")
+    #    st.write("Neck Circumference: ", neck_circ)
+    #    st.write("Daytime Tiredness: ", daytime_tiredness)
+    #    st.write("Snoring: ", snoring)
 
     st.write(" ")
-    st.write("# **Recommendations**")
+    st.write("# **Overall Recommendations**")
 
     st.write("Intensify and individualise structured nutritional counselling and lifestyle interventions. Refer for investigation, diagnosis and treatment by appropriate clinician if necessary.")
     st.write("Medication review (consider antipsychotic switching; review medications and rationalise any polypharmacy).")
