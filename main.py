@@ -470,4 +470,4 @@ if bmi == '≥35' or neck_circ == "≥40 cm" or daytime_tiredness == "Yes" or sn
     
     """
 
-st.code(markdown_body, language='markdown', line_numbers=False)
+#st.code(markdown_body, language='markdown', line_numbers=False)
