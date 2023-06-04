@@ -326,142 +326,147 @@ if submit:
         """, unsafe_allow_html = True)
 
 
-markdown_body = f"# **Recommendations**\n\n"
+markdown_body = f"""Cardiometabolic Calculator Recommendations
 
-markdown_body += "Intensify and individualise structured nutritional counselling and lifestyle interventions. Refer for investigation, diagnosis and treatment by appropriate clinician if necessary.\n"
-markdown_body += "Medication review (consider antipsychotic switching; review medications and rationalise any polypharmacy).\n\n"
+"""
+
+markdown_body += "Intensify and individualise structured nutritional counselling and lifestyle interventions. Refer for investigation, diagnosis and treatment by appropriate clinician if necessary."
+markdown_body += """
+Medication review (consider antipsychotic switching; review medications and rationalise any polypharmacy).
+
+"""
 
 if smoking == "Yes":
     markdown_body += """
-    ### **Smoking:**
+    Smoking:
     As the person is a smoker, it is recommended that they quit smoking. This will help to reduce their risk of developing cardiovascular disease.
-    #### *Interventions:*
-    <li>Individualised smoking cessation program</li>
-    <li>Use Mindgardens Tobacco Treatment Framework</li>
-    <li>quitnow.gov.au</li>
-    <li>icanquit.com.au</li>
+    Interventions:
+    • Individualised smoking cessation program
+    • Use Mindgardens Tobacco Treatment Framework
+    • quitnow.gov.au
+    • icanquit.com.au
 
-    #### *Targets:*
-    <li>Smoking prevention or cessation</li>
+    Targets:
+    • Smoking prevention or cessation
     
     """
 
 if diet == "Yes":
     markdown_body += """
-    ### **Diet:**
+    Diet:
     As the person has a poor diet, it is recommended that they improve their diet. This will help to reduce their risk of developing cardiovascular disease.
-    #### *Interventions:*
-    <li>Decrease in discretionary foods</li>
-    <li>Increase in vegetables and legumes/beans</li>
-    <li>Consider referral to a Dietitian</li>
-    <li>eatforhealth.gov.au</li>
+    Interventions:
+    • Decrease in discretionary foods
+    • Increase in vegetables and legumes/beans
+    • Consider referral to a Dietitian
+   • eatforhealth.gov.au
     
-    #### *Targets:*
-    <li>Improve quality of diet</li>
-    <li>Contain energy intake (to stabilise weight)</li>
+    Targets:
+    • Improve quality of diet
+    • Contain energy intake (to stabilise weight)
 
     """
 
 if activity == "No":
     markdown_body += """
-    ### **Activity:**
+    Activity:
     As the person is sedentary, it is recommended that they increase their physical activity. This will help to reduce their risk of developing cardiovascular disease.
-    #### *Interventions:*
-    <li>Decrease sedentariness</li>
-    <li>Increase physical activity</li>
-    <li>Refer to the Physical Activity Guidelines</li>
-    <li>Consider referral to an Exercise Physiologist</li>
+    Interventions:
+    • Decrease sedentariness
+    • Increase physical activity
+    • Refer to the Physical Activity Guidelines
+    • Consider referral to an Exercise Physiologist
     
-    #### *Targets:*
-    <li>Physical activity (at least 30 mins on most, preferably all days)</li>
+    Targets:
+    • Physical activity (at least 30 mins on most, preferably all days)
 
     """
 
 if (bmi in ['25-29','30-34','≥35'] or (bmi in ['≥23', '23-30','30-34','≥35']) and ethnicity=='Yes') or (weight_increase == "Yes") or (sex == "Male" and waist_circ >= 94) or (sex == "Female" and waist_circ >= 80) or (ethnicity == "Yes" and sex == "Male" and waist_circ >= 90) or waist_increase == "Yes":
     markdown_body += f"""
-    ### **Weight and BMI:**
+    Weight and BMI:
     As the person has a BMI of {bmi} kg/m2, it is recommended that they lose weight. This will help to reduce their risk of developing cardiovascular disease.
-    #### *Interventions:*
-    <li>Consider metformin and/or GLP receptor agonist</li>
+    Interventions:
+    • Consider metformin and/or GLP receptor agonist
     """
     if bmi in ["30-34","≥35"]:
         markdown_body += """Consider intensive intervention if BMI is greater than or equal to 30"""
-    markdown_body += """#### *Targets:*"""
-    markdown_body += """<li>BMI 20-24.9 kg/m2 (<23 kg/m2) </li>
-    <li>Waist circumference: <94 cm male (<90 cm) and <80 cm female </li>"""
+    markdown_body += """Targets:"""
+    markdown_body += """<li>BMI 20-24.9 kg/m2 (<23 kg/m2)
+    • Waist circumference: <94 cm male (<90 cm) and <80 cm female """
 
 if systolic_bp == '≥140 mmHg' or diastolic_bp == '≥90 mmHg':
     markdown_body += f"""
-    ### **Blood Pressure:**
+    Blood Pressure:
     As the person has a systolic blood pressure of {systolic_bp} and a diastolic blood pressure of {diastolic_bp}, it is recommended that they lower their blood pressure. This will help to reduce their risk of developing cardiovascular disease.
-    #### *Interventions:*
-    <li>Consider antihypertensive medication</li>
-    <li>Limit salt intake in diet</li>
+    Interventions:
+    • Consider antihypertensive medication
+    • Limit salt intake in diet
     
-    #### *Targets:*
-    <li><140 mmHg systolic and/or <90 mmHg diastolic</li>
-    <li>(<130/80 if CVD or diabetes)</li>
+    Targets:
+    • <140 mmHg systolic and/or <90 mmHg diastolic
+    • (<130/80 if CVD or diabetes)
 
     """
 
 if (hba1c == ['6.0%-6.4% (42-47 mmol/mol)','≥6.4% (48 mmol/mol)']) or (fpg in ['5.6-6.9 mmol/L','≥7.0 mmol/L']) or ausdrisk == '≥12':
     if hba1c == "≥6.4% (48 mmol/mol)" or fpg == "≥7.0 mmol/L" or rpg == "≥11.1 mmol/L":
         markdown_body += f"""
-        ### **Glucose:**
+        Glucose:
         The person has a HbA1c of {hba1c}, a FPG of {fpg} and a RPG of {rpg}. This indicates that they meet the criteria for diabetes and intervention is recommended.
-        #### *Interventions:*
-        <li>{patient_name} meets the criteria for diabetes</li>
-        <li> Consider metformin</li>
-        <li>Consider referral to an endocrinologist</li>
+        Interventions:
+        • {patient_name} meets the criteria for diabetes
+        •  Consider metformin
+        • Consider referral to an endocrinologist
         
-        #### *Targets:*
-        <li>HbA1c individualised to the consumer's circumstances</li>
-        <li>Generally <7% As per [RACGP Handbook](https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/diabetes/introduction)</li>
+        Targets:
+        • HbA1c individualised to the consumer's circumstances
+        • Generally <7% As per RACGP Handbook - https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/diabetes/introduction
 
         """
     else:
         markdown_body += f"""
-        ### **Glucose:**
+        Glucose:
         The person has a HbA1c of {hba1c}, a FPG of {fpg} and a RPG of {rpg}. This indicates that they are at risk of diabetes and intervention is recommended.
-        #### *Interventions:*
-        <li>Consider metformin</li>
-        <li>Consider referral to an endocrinologist if necessary</li>
+        Interventions:
+        • Consider metformin
+        • Consider referral to an endocrinologist if necessary
         
-        #### *Targets:*
+        Targets:
         It is vital to prevent or delay onset of diabetes by targeting:
-        <li>HbA1c <6.0% (<42 mmol/mol)</li>
-        <li>FPG <5.6 mmol/L</li>
+        • HbA1c <6.0% (<42 mmol/mol)
+        • FPG <5.6 mmol/L
 
         """
 
 if tc == "≥4 mmol/L" or ldl == "≥2 mmol/L" or hdl == "≥1 mmol/L" or non_hdl == "≥2.5 mmol/L" or trig == "≥1.7 mmol/L":
     markdown_body += f"""
-    ### **Blood Lipids:**
+    Blood Lipids:
     As the person has a TC of {tc}, a LDL of {ldl}, a HDL of {hdl}, a non-HDL of {non_hdl} and a TRIG of {trig}, it is recommended that they lower their blood lipids. This will help to reduce their risk of developing cardiovascular disease.
-    #### *Interventions:*
-    <li>Consider lipid lowering therapy</li>
+    Interventions:
+    • Consider lipid lowering therapy
 
-    #### *Targets:*
-    <li>TC <4 mmol/L</li>
-    <li>LDL <2.0 mmol/L (<1.8 if CVD or diabetes)</li>
-    <li>HDL ≥1.0 mmol/L</li>
-    <li>non-HDL <2.5 mmol/L</li>
-    <li>TRIG <1.7 mmol/L</li>
+    Targets:
+    • TC <4 mmol/L
+    • LDL <2.0 mmol/L (<1.8 if CVD or diabetes)
+    • HDL ≥1.0 mmol/L
+    • non-HDL <2.5 mmol/L
+    • TRIG <1.7 mmol/L
 
     """
 
 if bmi == '≥35' or neck_circ == "≥40 cm" or daytime_tiredness == "Yes" or snoring == "Yes":
     markdown_body += f"""
-    ### **Sleep:**
+    Sleep:
     As the person has a BMI of {bmi} kg/m2, a neck circumference of {neck_circ} cm, daytime tiredness and snoring, it is recommended that they be assessed for obstructive sleep apnoea.
-    #### *Interventions:*
-    <li>Consider referral for a sleep study</li>
-    <li>If mild-moderate sleep apnoea is diagnosed, target weight loss</li>
-    <li>If severe sleep apnoea is diagnosed, consider CPAP</li>
+    Interventions:
+    • Consider referral for a sleep study
+    • If mild-moderate sleep apnoea is diagnosed, target weight loss
+    • If severe sleep apnoea is diagnosed, consider CPAP
     
-    #### *Targets:*
-    <li>Improved alertness</li>
-    <li>Reduced or resolved OSA</li>
+    Targets:
+    • Improved alertness
+    • Reduced or resolved OSA
     
     """
 
