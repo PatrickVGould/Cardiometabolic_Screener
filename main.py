@@ -18,7 +18,7 @@ with col1:
     # Add the logo
     st.image("mg_logo.png", use_column_width='auto')
 with col2:
-    st.markdown("""<h2 style='margin-top: -1; text-align: center; color: #404040;'>Positive Cardiometabolic Health Resource</h2>""", unsafe_allow_html=True)
+    st.markdown("""<h2 style='margin-top: -1; text-align: center; color: #404040;'>Positive Cardiometabolic Health Resource - Calculator</h2>""", unsafe_allow_html=True)
 st.markdown("<h4 style='text-align: center; color: #404040;'>An early intervention framework for people on psychotropic medication</h4>", unsafe_allow_html=True)
 
 #Explainer text
