@@ -308,7 +308,7 @@ if submit:
 
         #### *Targets:*
         <li>TC <4 mmol/L</li>
-        <li>LDL <2.0 mmol/L (<1.8 if CVD or diabetes)</li>
+        <li>LDL <2.0 mmol/L (<1.8 if CVD or diabetes) </li>
         <li>HDL ≥1.0 mmol/L</li>
         <li>non-HDL <2.5 mmol/L</li>
         <li>TRIG <1.7 mmol/L</li>
