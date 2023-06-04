@@ -195,6 +195,7 @@ if submit:
     if smoking == "Yes":
         st.markdown(body = """
         ### **Smoking:**
+        As the person is a smoker, it is recommended that they quit smoking. This will help to reduce their risk of developing cardiovascular disease.
         #### *Interventions:*
         <li>Individualised smoking cessation program</li>
         <li>Use Mindgardens Tobacco Treatment Framework</li>
@@ -209,6 +210,7 @@ if submit:
     if diet == "Yes":
         st.markdown(body ="""
         ### **Diet:**
+        As the person has a poor diet, it is recommended that they improve their diet. This will help to reduce their risk of developing cardiovascular disease.
         #### *Interventions:*
         <li>Decrease in discretionary foods</li>
         <li>Increase in vegetables and legumes/beans</li>
@@ -223,6 +225,7 @@ if submit:
     if activity == "No":
         st.markdown(body = """
         ### **Activity:**
+        As the person is sedentary, it is recommended that they increase their physical activity. This will help to reduce their risk of developing cardiovascular disease.
         #### *Interventions:*
         <li>Decrease sedentariness</li>
         <li>Increase physical activity</li>
@@ -235,8 +238,9 @@ if submit:
         """, unsafe_allow_html = True)
 
     if (bmi in ['25-29','30-34','≥35'] or (bmi in ['≥23', '23-30','30-34','≥35']) and ethnicity=='Yes') or (weight_increase == "Yes") or (sex == "Male" and waist_circ >= 94) or (sex == "Female" and waist_circ >= 80) or (ethnicity == "Yes" and sex == "Male" and waist_circ >= 90) or waist_increase == "Yes":
-        st.markdown(body = """
+        st.markdown(body = f"""
         ### **Weight and BMI:**
+        As the person has a BMI of {bmi} kg/m2, it is recommended that they lose weight. This will help to reduce their risk of developing cardiovascular disease.
         #### *Interventions:*
         <li>Consider metformin and/or GLP receptor agonist</li>""", unsafe_allow_html = True)
         if bmi in ["30-34","≥35"]:
@@ -248,8 +252,9 @@ if submit:
         """, unsafe_allow_html = True)
 
     if systolic_bp == '≥140 mmHg' or diastolic_bp == '≥90 mmHg':
-        st.markdown(body = """
+        st.markdown(body = f"""
         ### **Blood Pressure:**
+        As the person has a systolic blood pressure of {systolic_bp} and a diastolic blood pressure of {diastolic_bp}, it is recommended that they lower their blood pressure. This will help to reduce their risk of developing cardiovascular disease.
         #### *Interventions:*
         <li>Consider antihypertensive medication</li>
         <li>Limit salt intake in diet</li>
@@ -264,6 +269,7 @@ if submit:
         if hba1c == "≥6.4% (48 mmol/mol)" or fpg == "≥7.0 mmol/L" or rpg == "≥11.1 mmol/L":
             st.markdown(body = f"""
             ### **Glucose:**
+            The person has a HbA1c of {hba1c}, a FPG of {fpg} and a RPG of {rpg}. This indicates that they meet the criteria for diabetes and intervention is recommended.
             #### *Interventions:*
             <li>{patient_name} meets the criteria for diabetes</li>
             <li> Consider metformin</li>
@@ -277,6 +283,7 @@ if submit:
         else:
             st.markdown(body = f"""
             ### **Glucose:**
+            The person has a HbA1c of {hba1c}, a FPG of {fpg} and a RPG of {rpg}. This indicates that they are at risk of diabetes and intervention is recommended.
             #### *Interventions:*
             <li>Consider metformin</li>
             <li>Consider referral to an endocrinologist if necessary</li>
@@ -289,8 +296,9 @@ if submit:
             """, unsafe_allow_html = True)
 
     if tc == "≥4 mmol/L" or ldl == "≥2 mmol/L" or hdl == "≥1 mmol/L" or non_hdl == "≥2.5 mmol/L" or trig == "≥1.7 mmol/L":
-        st.markdown(body = """
+        st.markdown(body = f"""
         ### **Blood Lipids:**
+        As the person has a TC of {tc}, a LDL of {ldl}, a HDL of {hdl}, a non-HDL of {non_hdl} and a TRIG of {trig}, it is recommended that they lower their blood lipids. This will help to reduce their risk of developing cardiovascular disease.
         #### *Interventions:*
         <li>Consider lipid lowering therapy</li>
 
@@ -304,8 +312,9 @@ if submit:
         """, unsafe_allow_html = True)
 
     if bmi == '≥35' or neck_circ == "≥40 cm" or daytime_tiredness == "Yes" or snoring == "Yes":
-        st.markdown(body = """
+        st.markdown(body = f"""
         ### **Sleep:**
+        As the person has a BMI of {bmi} kg/m2, a neck circumference of {neck_circ} cm, daytime tiredness and snoring, it is recommended that they be assessed for obstructive sleep apnoea.
         #### *Interventions:*
         <li>Consider referral for a sleep study</li>
         <li>If mild-moderate sleep apnoea is diagnosed, target weight loss</li>
