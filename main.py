@@ -245,9 +245,9 @@ if submit:
         <li>Consider metformin and/or GLP receptor agonist</li>""", unsafe_allow_html = True)
         if bmi in ["30-34","≥35"]:
             st.markdown(body = """Consider intensive intervention if BMI is greater than or equal to 30""", unsafe_allow_html = True)
-        st.markdown(body="""#### *Targets:*
+        st.markdown(body = """#### *Targets:*
         <li>BMI 20-24.9 kg/m2 (<23 kg/m2)</li>
-        <li>Waist circumference: <94 cm male (<90 cm)* and <80 cm female</li>""", unsafe_allow_html = True)
+        <li>Waist circumference: <94 cm male (<90 cm) and <80 cm female</li>""", unsafe_allow_html = True)
 
     if systolic_bp == '≥140 mmHg' or diastolic_bp == '≥90 mmHg':
         st.markdown(body = f"""
