@@ -189,7 +189,7 @@ if submit:
     st.markdown("""---""")
     st.write("# **Personalised Recommendations Report:**")
     st.write("Persons Name: ", patient_name)
-    st.write("Age: ", age)
+    st.write("Age: ", str(age))
     st.write("Sex: ", sex)
 
     st.write("Intensify and individualise structured nutritional counselling and lifestyle interventions. Refer for investigation, diagnosis and treatment by appropriate clinician if necessary.")
