@@ -22,7 +22,7 @@ with col2:
 st.markdown("<h4 style='text-align: center; color: #404040;'>An early intervention framework for people on psychotropic medication</h4>", unsafe_allow_html=True)
 
 #Explainer text
-h4_divider("How to use the tool:")
+h4_divider("How to use the calculator:")
 st.markdown("""<p style='text-align: justify; color: #404040;'>This is a tool to help you identify people on psychotropic medications who may be at risk of poor cardiometabolic health and provide them with early intervention. It is not a diagnostic tool and should not be used to diagnose CMD. It is also not a substitute for clinical judgement. If you have any concerns about a person's health, please contact your local GP or mental health clinician.</p>""", unsafe_allow_html=True)
 
 # Demographic questions
@@ -194,6 +194,7 @@ if submit:
     st.write("Medication review (consider antipsychotic switching; review medications and rationalise any polypharmacy).")
 
     if smoking == "Yes":
+        st.markdown("""---""")
         st.markdown(body = """
         ### **Smoking:**
         As the person is a smoker, it is recommended that they quit smoking. This will help to reduce their risk of developing cardiovascular disease.
@@ -209,6 +210,7 @@ if submit:
         """, unsafe_allow_html = True)
 
     if diet == "Yes":
+        st.markdown("""---""")
         st.markdown(body ="""
         ### **Diet:**
         As the person has a poor diet, it is recommended that they improve their diet. This will help to reduce their risk of developing cardiovascular disease.
@@ -224,6 +226,7 @@ if submit:
 
         """, unsafe_allow_html = True)
     if activity == "No":
+        st.markdown("""---""")
         st.markdown(body = """
         ### **Activity:**
         As the person is sedentary, it is recommended that they increase their physical activity. This will help to reduce their risk of developing cardiovascular disease.
@@ -239,6 +242,7 @@ if submit:
         """, unsafe_allow_html = True)
 
     if (bmi in ['25-29','30-34','≥35'] or (bmi in ['≥23', '23-30','30-34','≥35']) and ethnicity=='Yes') or (weight_increase == "Yes") or (sex == "Male" and waist_circ >= 94) or (sex == "Female" and waist_circ >= 80) or (ethnicity == "Yes" and sex == "Male" and waist_circ >= 90) or waist_increase == "Yes":
+        st.markdown("""---""")
         st.markdown(body = f"""
         ### **Weight and BMI:**
         As the person has a BMI of {bmi} kg/m2, it is recommended that they lose weight. This will help to reduce their risk of developing cardiovascular disease.
@@ -251,6 +255,7 @@ if submit:
         <li>Waist circumference: <94 cm male (<90 cm) and <80 cm female </li>""", unsafe_allow_html = True)
 
     if systolic_bp == '≥140 mmHg' or diastolic_bp == '≥90 mmHg':
+        st.markdown("""---""")
         st.markdown(body = f"""
         ### **Blood Pressure:**
         As the person has a systolic blood pressure of {systolic_bp} and a diastolic blood pressure of {diastolic_bp}, it is recommended that they lower their blood pressure. This will help to reduce their risk of developing cardiovascular disease.
@@ -266,6 +271,7 @@ if submit:
 
     if (hba1c == ['6.0%-6.4% (42-47 mmol/mol)','≥6.4% (48 mmol/mol)']) or (fpg in ['5.6-6.9 mmol/L','≥7.0 mmol/L']) or ausdrisk == '≥12':
         if hba1c == "≥6.4% (48 mmol/mol)" or fpg == "≥7.0 mmol/L" or rpg == "≥11.1 mmol/L":
+            st.markdown("""---""")
             st.markdown(body = f"""
             ### **Glucose:**
             The person has a HbA1c of {hba1c}, a FPG of {fpg} and a RPG of {rpg}. This indicates that they meet the criteria for diabetes and intervention is recommended.
@@ -280,6 +286,7 @@ if submit:
 
             """, unsafe_allow_html = True)
         else:
+            st.markdown("""---""")
             st.markdown(body = f"""
             ### **Glucose:**
             The person has a HbA1c of {hba1c}, a FPG of {fpg} and a RPG of {rpg}. This indicates that they are at risk of diabetes and intervention is recommended.
@@ -295,6 +302,7 @@ if submit:
             """, unsafe_allow_html = True)
 
     if tc == "≥4 mmol/L" or ldl == "≥2 mmol/L" or hdl == "≥1 mmol/L" or non_hdl == "≥2.5 mmol/L" or trig == "≥1.7 mmol/L":
+        st.markdown("""---""")
         st.markdown(body = f"""
         ### **Blood Lipids:**
         As the person has a TC of {tc}, a LDL of {ldl}, a HDL of {hdl}, a non-HDL of {non_hdl} and a TRIG of {trig}, it is recommended that they lower their blood lipids. This will help to reduce their risk of developing cardiovascular disease.
@@ -311,6 +319,7 @@ if submit:
         """, unsafe_allow_html = True)
 
     if bmi == '≥35' or neck_circ == "≥40 cm" or daytime_tiredness == "Yes" or snoring == "Yes":
+        st.markdown("""---""")
         st.markdown(body = f"""
         ### **Sleep:**
         As the person has a BMI of {bmi} kg/m2, a neck circumference of {neck_circ} cm, daytime tiredness and snoring, it is recommended that they be assessed for obstructive sleep apnoea.
