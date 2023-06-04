@@ -142,10 +142,8 @@ submit = st.button("Submit")
 # Recommendations
 if submit:
     start = False
-    st.write("**Cardiometabolic Calculator Recommendations**")
-    st.write("Persons Name: ", patient_name)
-    st.write("Age: ", age)
-    st.write("Sex: ", sex)
+    #st.write("**Cardiometabolic Calculator Recommendations**")
+
 
     #st.write("**Current Values:**")
     # Table of the current values that were entered by the user that are not blank
@@ -188,7 +186,11 @@ if submit:
     #    st.write("Snoring: ", snoring)
 
     st.write(" ")
-    st.write("# **Overall Recommendations**")
+    st.markdown("""---""")
+    st.write("# **Personalised Recommendations Report:**")
+    st.write("Persons Name: ", patient_name)
+    st.write("Age: ", age)
+    st.write("Sex: ", sex)
 
     st.write("Intensify and individualise structured nutritional counselling and lifestyle interventions. Refer for investigation, diagnosis and treatment by appropriate clinician if necessary.")
     st.write("Medication review (consider antipsychotic switching; review medications and rationalise any polypharmacy).")
